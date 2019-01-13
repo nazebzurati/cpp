@@ -48,4 +48,4 @@ int main () {
 // class and maintain its persistence. Persistence is the continueance of an subject
 // after a class not remain relevent.
 // ----------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g SOLID/single.cpp -o exec.out
+// *compile: g++ -std=c++11 -g SOLID/single_responsibility.cpp -o exec.out

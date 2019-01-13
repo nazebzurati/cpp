@@ -66,4 +66,4 @@ int main() {
 // everthing in order to make up a slight changes in code or creating new element (in current case other bird
 // type and you have to add the if statement for each available derived-bird class)
 // --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g SOLID/liskov.cpp -o exec.out
+// *compile: g++ -std=c++11 -g SOLID/liskov_substitution.cpp -o exec.out

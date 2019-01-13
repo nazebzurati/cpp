@@ -99,4 +99,4 @@ int main() {
 
 // Open Close Principle is a principle where it open for extension while its close for modifiction
 // ------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g SOLID/openclose.cpp -o exec.out
+// *compile: g++ -std=c++11 -g SOLID/open_close.cpp -o exec.out
