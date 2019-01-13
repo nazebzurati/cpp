@@ -1,3 +1,6 @@
-// compiled file type
+# compiled file type
 *.out
 *.o
+
+# folder
+.vscode/
