@@ -44,6 +44,7 @@ int main() {
 // is to be inherit by a derived class (let say Printer) and the derived class only want to use the print method
 // only. Thus, this will create an unused fax method that the derived class required to inherit from the base
 // class. Interface segregation extract this method into seperate interface. Then, the printer class can inherit
-// this extracted interface and make the code better and more efficient.
+// this extracted interface and make the code better and more efficient. It follows YAGNI (You ain't gonna to 
+// need it) as all interface only be inherited when we want to use.
 // --------------------------------------------------------------------------------------------------------
 // *compile: g++ -std=c++11 -g SOLID/interface_segregation.cpp -o exec.out
