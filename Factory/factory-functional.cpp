@@ -1,12 +1,13 @@
 #include <iostream>
 #include <cstring>
+#include <vector>
 #include <memory>
 #include <map>
 #include <functional>
 using namespace std;
 
 struct HotDrink {
-    virtual ~HotDrink() = default;
+    ~HotDrink();
     virtual void Prepare(int volume) = 0;
 };
 
@@ -22,62 +23,29 @@ struct Coffee: HotDrink {
     }
 };
 
-struct HotDrinkFactory {
-    virtual unique_ptr<HotDrink> make() const = 0;
-};
-
-struct TeaFactory: HotDrinkFactory {
-    unique_ptr<HotDrink> make() const override {
-        return make_unique<Tea>();
-    }
-};
-
-struct CoffeeFactory: HotDrinkFactory {
-    unique_ptr<HotDrink> make() const override {
-        return make_unique<Coffee>();
-    }
-};
-
-// implementation without factory
-unique_ptr<HotDrink> make_drink(string type) {
-    unique_ptr<HotDrink> drink;
-    if (type == "tea") {
-        drink = make_unique<Tea>();
-        drink->Prepare(10);
-    } else {
-        drink = make_unique<Coffee>();
-        drink->Prepare(100);
-    }
-    return drink;
-}
-
-class DrinkFactory {
-    map<string, unique_ptr<HotDrinkFactory>> factories;
+struct StructFactories {
     public:
-        DrinkFactory() {
-            factories["coffee"] = make_unique<CoffeeFactory>();
-            factories["tea"] = make_unique<TeaFactory>();
-        }
-        unique_ptr<HotDrink> make_drink(const string& name) {
-            auto drink = factories[name]->make();
-            drink->Prepare(200);
-            return drink;
-        }
+        string drink_type;
+        HotDrink* drink_factory;
+        StructFactories(string d, HotDrink* h): drink_type(d), drink_factory(h) {};
 };
 
 class DrinkWithVolumeFactory {
-    map<string, function<unique_ptr<HotDrink>()>> factories;
+    vector<StructFactories> factories;
     public:
         DrinkWithVolumeFactory() {
-            factories["tea"] = [] {
-                auto tea = make_unique<Tea>();
-                tea->Prepare(200);
-                cout << "automatic volume set!" << endl;
-                return tea;
-            };
+            factories.push_back(StructFactories("tea", new Tea()));
+            factories.push_back(StructFactories("coffee", new Coffee()));
         }
-        unique_ptr<HotDrink> make_drink(const string& name) {
-            return factories[name]();
+        HotDrink* make_drink(const string& name) {
+            for (auto factory: factories) {
+                if (factory.drink_type == name) {
+                    HotDrink *rv = factory.drink_factory;
+                    rv->Prepare(200);
+                    return rv;
+                }
+            }
+            return nullptr;
         }
 };
 
@@ -91,9 +59,6 @@ int main() {
 // Factory is a method to deal with the problem of creating objects without having to specify the exact
 // class of the object that will be created.
 // --------------------------------------------------------------------------------------------------------
-// For an example in this tutorial, Point class could not have two constructor that have the same 
-// argument: Point(float x, float y) for cartesian and Point(float rho, float theta). However, we can use
-// one constructor and define it based on its type (in this example, enum class were used). It's just a
-// simple if else or switch case would be sufficient to know which operation to be executed.
+// It quite similar to Abstract Factory but Functional Factory does not require interface.
 // --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++14 -g Factory/factory-functional.cpp -o exec.out
+// *compile: g++ -std=c++11 -g Factory/factory-functional.cpp -o exec.out

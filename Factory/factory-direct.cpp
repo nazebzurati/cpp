@@ -50,4 +50,4 @@ int main() {
 // one constructor and define it based on its type (in this example, enum class were used). It's just a
 // simple if else or switch case would be sufficient to know which operation to be executed.
 // --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g Factory/factory-2.cpp -o exec.out
+// *compile: g++ -std=c++11 -g Factory/factory-direct.cpp -o exec.out
