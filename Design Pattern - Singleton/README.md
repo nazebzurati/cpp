@@ -1,0 +1,1 @@
+Singleton is a pattern where an object is required to be instantiated once and only once but accessible application-wide global. Other thing about singleton is a singleton is self construct, it cannot be created or copied by reference.
