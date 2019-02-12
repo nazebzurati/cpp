@@ -40,8 +40,3 @@ int main() {
 
     return 0;
 }
-
-// Factory is a method to deal with the problem of creating objects without having to specify the exact
-// class of the object that will be created.
-// --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g Factory/factory-inner.cpp -o exec.out

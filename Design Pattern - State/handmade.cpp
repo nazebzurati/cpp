@@ -94,5 +94,3 @@ int main() {
 
     return 0;
 }
-
-// compile: g++ -std=c++11 -g State/handmade.cpp -o exec.out

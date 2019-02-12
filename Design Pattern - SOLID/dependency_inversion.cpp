@@ -57,18 +57,3 @@ int main() {
 
     return 0;
 }
-
-// Dependency inversion
-// --------------------------------------------------------------------------------------------------------
-// Split into 2 ideas:
-// - high level modules should not depend on low-level modules.
-// - abstraction should not depend on details.
-//
-// Abstraction is interface or base class that is generic as possible. If there is changes in low-level
-// module, it would broke the high-level module. In this case, it is not a good implementation if research 
-// interface directly use data from relationship interface. As for that, we can use a dependecy injector
-// (official term used) or we also can call it as mediator (term based my very own opinion). Mediator 
-// injector allow to specify certain default. As an example, the user is require to specify a copy of 
-// relationship to use a high level module.
-// --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g SOLID/dependency_inversion.cpp -o exec.out

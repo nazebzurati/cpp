@@ -64,5 +64,3 @@ int main() {
 
     return 0;
 }
-
-// compile: g++ -std=c++11 -g State/classic.cpp -o exec.out

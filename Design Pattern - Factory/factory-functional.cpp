@@ -55,10 +55,3 @@ int main() {
     auto d = dfv.make_drink("tea");
     return 0;
 }
-
-// Factory is a method to deal with the problem of creating objects without having to specify the exact
-// class of the object that will be created.
-// --------------------------------------------------------------------------------------------------------
-// It quite similar to Abstract Factory but Functional Factory does not require interface.
-// --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g Factory/factory-functional.cpp -o exec.out

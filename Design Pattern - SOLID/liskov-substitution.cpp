@@ -57,13 +57,3 @@ int main() {
 
     return 0;
 }
-
-// Liskov Principle is a principle where subtype should to be immediately subtitutable for their base type.
-// --------------------------------------------------------------------------------------------------------
-// In the other hand, Liskov says that the code should work without knowing the actual class. The tutorial 
-// actually use rectangle-square problem (circle-eclipse problem) and it's hard to be understand as it only
-// show the problem and not the solution. This approach is to reduce the posibilites that you need to refactor
-// everthing in order to make up a slight changes in code or creating new element (in current case other bird
-// type and you have to add the if statement for each available derived-bird class)
-// --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g SOLID/liskov_substitution.cpp -o exec.out

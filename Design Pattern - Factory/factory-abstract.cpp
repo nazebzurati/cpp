@@ -70,11 +70,3 @@ int main() {
     auto d = df.make_drink("tea");
     return 0;
 }
-
-// Factory is a method to deal with the problem of creating objects without having to specify the exact
-// class of the object that will be created.
-// --------------------------------------------------------------------------------------------------------
-// It quite similar to Functional Factory but Abstract Factory does require interface which in this case,
-// HotDrinkFactory.
-// --------------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g Factory/factory-abstract.cpp -o exec.out

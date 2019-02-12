@@ -17,8 +17,9 @@ struct Specification {
     virtual bool isSatisfied(T* item) const = 0;
 };
 
+// v is for virtual Filter. the reason why Specification doesn't have v because Specification will only apply specifically (specificationByColor etc) while Filter is not
 template <typename T>
-struct vFilter { // v is for virtual Filter. the reason why Specification doesn't have v because Specification will only apply specifically (specificationByColor etc) while Filter is not
+struct vFilter {
     virtual vector<T*> filter(vector<Product*> items, Specification<T>& spec) = 0;
 };
 
@@ -60,13 +61,14 @@ struct SpecificationColor: Specification <Product> {
 
 struct SpecificationSize: Specification <Product> {
     Size size;
-    explicit SpecificationSize(const Size size): size(size) {}; // why use explicit? It seems that it uses explicit for const object
+    explicit SpecificationSize(const Size size): size(size) {}; // why use explicit? Explicit requires an object to be correctly construct
     bool isSatisfied(Product* item) const override {
         return item->size == size;
     }
 };
 
 int main() {
+    
     // creating products
     Product apple { "Apple", Color::red, Size::small };
     Product shirt { "Shirt", Color::blue, Size::medium };
@@ -96,7 +98,3 @@ int main() {
     // return 
     return 0;
 }
-
-// Open Close Principle is a principle where it open for extension while its close for modifiction
-// ------------------------------------------------------------------------------------------------
-// *compile: g++ -std=c++11 -g SOLID/open_close.cpp -o exec.out
