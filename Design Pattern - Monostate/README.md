@@ -1,0 +1,1 @@
+Monostate is an alternative of singleton. It is basically have the same static object being shared to all instance of constructed object.
