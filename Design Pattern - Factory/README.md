@@ -1,1 +1,0 @@
-Factory is a method to deal with the problem of creating objects without having to specify the exact class of the object that will be created. Abstract Factory is quite similar to Functional Factory but Abstract Factory does require an interface.

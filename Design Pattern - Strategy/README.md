@@ -1,1 +1,0 @@
-Strategy design pattern focused on a system behaviour partially specified at runtime. Algorithms can be decomposed into higher and lower level parts. It enables the exact behaviour of a system to be selected either at run-time (dynamic)_ or compile time (static).

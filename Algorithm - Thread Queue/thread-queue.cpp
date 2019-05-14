@@ -5,6 +5,11 @@
 #include <future>
 #include <condition_variable>
 
+// define USE_QUEUE as false to disable thread queue
+
+#define USE_QUEUE true
+#define MAX_THREAD 100
+
 class SafeQueue
 {
     public:
@@ -76,9 +81,6 @@ class SafeQueue
         SafeQueue(SafeQueue const&) = delete; // prevent the singleton be created
         void operator = (SafeQueue const&) = delete; // prevent the singleton be copied by reference
 };
-
-#define MAX_THREAD 100
-#define USE_QUEUE true
 
 void exec(int a) {
     int val = rand() % 10 + 1;
