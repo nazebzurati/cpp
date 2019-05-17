@@ -13,7 +13,7 @@ g++ -std=c++11 -g <source-file> -o exec.out
 - SOLID: SOLID is an abbreviation for:-
   - **S**ingle responsibility: Which a class should have single responsibility.
   - **O**pen-close principle: A principle where it opens for extension while its close for modification.
-  - **L**iskov principle: A principle where subtype should to be immediately subtitutable for their base type.
+  - **L**iskov principle: A principle where subtype should to be immediately substitutable for their base type.
   - **I**nterface segregation: To prevent creating too large interface.
   - **D**ependency segragation: A principle where high level modules should not depend on low-level modules and abstraction should not depend on details.
 - Singleton: A pattern where an object is required to be instantiated once and only once but accessible application-wide global. Other thing about singleton is a singleton is self construct, it cannot be created or copied by reference.
@@ -24,6 +24,9 @@ g++ -std=c++11 -g <source-file> -o exec.out
 ## Algorithm
 
 - Thread Queue: A queue of a singleton (only one instance and globally available) with one running thread. In this example shows that if you are implementing multithread, cout will have this interleaving state / race condition on who can display on the console at one point of time. The reason why use thread queue is basically to have one thread to sequentially display out the "cout" stored in a queue. This method would prevent interleaving state / race condition from happening and improve your application performance (using other threads instead the main thread to do this operation: also suitable for filestream writing and reading) although this problem may solve just by using printf or a mutex lock guard.
+- Sort:
+  - Bubble: Swapping the adjacent elements
+  - Insertion: Shift elements one by one
 
 ## Data Structure
 
