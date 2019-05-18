@@ -25,9 +25,11 @@ g++ -std=c++11 -g <source-file> -o exec.out
 
 - Thread Queue: A queue of a singleton (only one instance and globally available) with one running thread. In this example shows that if you are implementing multithread, cout will have this interleaving state / race condition on who can display on the console at one point of time. The reason why use thread queue is basically to have one thread to sequentially display out the "cout" stored in a queue. This method would prevent interleaving state / race condition from happening and improve your application performance (using other threads instead the main thread to do this operation: also suitable for filestream writing and reading) although this problem may solve just by using printf or a mutex lock guard.
 - Sort:
-  - Bubble: Swapping the adjacent elements
-  - Insertion: Shift elements one by one
+  - Bubble: Swapping the adjacent elements.
+  - Insertion: Shift elements one by one.
 
 ## Data Structure
 
 - Linked List: A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. A linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list. The number of nodes in a list is not fixed and can grow and shrink on demand.
+- Queue: First-In-First-Out (FIFO) linear abstract data structure.
+- Stack: Last-In-First-Out (LIFO) linear abstract data structre.
