@@ -27,6 +27,8 @@ g++ -std=c++11 -g <source-file> -o exec.out
 - Sort:
   - Bubble: Swapping the adjacent elements.
   - Insertion: Shift elements one by one.
+- Scheduling:
+  - Elevator: Schedule job based on current position, current direction and the job destination.
 
 ## Data Structure
 
