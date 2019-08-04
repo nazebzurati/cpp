@@ -9,7 +9,7 @@ jobs:
 
       - run:
           name: Install G++
-          command: apt-get install g++ make
+          command: apt-get install build-essential
 
       - run:
           name: Build all
