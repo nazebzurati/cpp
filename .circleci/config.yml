@@ -2,15 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
-
+      - image: "debian:stretch"
     steps:
       - checkout
-
       - run:
           name: Install G++
-          command: apt-get install build-essential
-
+          command: apt-get install -y g++ cmake
       - run:
           name: Build all
           command: make all
