@@ -9,11 +9,7 @@ jobs:
 
       - run:
           name: Install G++
-<<<<<<< HEAD
           command: apt-get install g++ make
-=======
-          command: apt-get install g++
->>>>>>> 08f77412e237cc42a9be37771dee8bc8b0fc86a2
 
       - run:
           name: Build all
