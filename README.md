@@ -1,9 +1,34 @@
 # README.md
 
+[![CircleCI](https://circleci.com/gh/nazebzurati/cpp.svg?style=svg)](https://circleci.com/gh/nazebzurati/cpp)
+
 You can compile the source code individually by executing below command.
 
 ```bash
 g++ -std=c++11 -g <source-file> -o exec.out
+```
+
+or 
+
+```bash 
+make <option>
+option:
+- all
+- clean
+- algorithm-scheduling-elevator
+- algorithm-sort-bubble
+- algorithm-sort-insertion
+- algorithm-thread-queue
+- data-structure-linked-list
+- data-structure-queue
+- data-structure-stack
+- design-pattern-factory
+- design-pattern-monostate
+- design-pattern-observer
+- design-pattern-singleton
+- design-pattern-solid
+- design-pattern-state
+- design-pattern-strategy
 ```
 
 ## Design Pattern
