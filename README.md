@@ -1,7 +1,5 @@
 # README.md
 
-[![CircleCI](https://circleci.com/gh/nazebzurati/cpp.svg?style=svg)](https://circleci.com/gh/nazebzurati/cpp)
-
 You can compile the source code individually by executing below command.
 
 ```bash
