@@ -13,6 +13,7 @@ make <option>
 option:
 - all
 - clean
+- algorithm-scheduling-dining-philosopher
 - algorithm-scheduling-elevator
 - algorithm-sort-bubble
 - algorithm-sort-insertion
@@ -52,6 +53,7 @@ option:
   - Insertion: Shift elements one by one.
 - Scheduling:
   - Elevator: Schedule job based on current position, current direction and the job destination.
+  - Dining Philosopher: Dining philosopher is a classic synchronization problem to describe concurrency control and deadlock problem. The rule is simple: (1) Philosopher need to think before start eats (2) The Philosopher can only eat if nearest chopstick is available (3) If one of the chopstick is in use, start from Step 1 (4) Eat will take time and chopstick will be released after eating. This can be managed by using semaphore / mutex / lock / similar locking mechanism.
 
 ## Data Structure
 

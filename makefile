@@ -6,7 +6,8 @@ CFLAGS 	= -std=c++11
 CFLAGS 	= -pthread
 
 # Projects
-PRJ		:= algorithm-scheduling-elevator
+PRJ		:= algorithm-scheduling-dining-philosopher
+PRJ		+= algorithm-scheduling-elevator
 PRJ		+= algorithm-sort-bubble
 PRJ		+= algorithm-sort-insertion
 PRJ		+= algorithm-thread-queue
@@ -22,6 +23,9 @@ PRJ		+= design-pattern-state
 PRJ		+= design-pattern-strategy
 
 # Compile
+algorithm-scheduling-dining-philosopher:
+	$(GPP) $(CFLAGS) "./Algorithm - Scheduling - Dining Philosopher/dining.cpp" -o $@.out
+
 algorithm-scheduling-elevator:
 	$(GPP) $(CFLAGS) "./Algorithm - Scheduling - Elevator/elevator.cpp" -o $@.out
 	
